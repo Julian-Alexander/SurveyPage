@@ -33,9 +33,70 @@ if ($connection->isTableExists(self::ANSWER_TABLE)) {
                          null,
                          ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
                          'Answer ID'
-                      
-            // build up your DB schema here
-                   );
+            )
+            ->addColumn(
+                        'answer1',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Answer'
+            )
+            ->addColumn(
+                        'answer2',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Answer'
+            )            
+            ->addColumn(
+                        'answer3',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Answer'
+            )            
+            ->addColumn(
+                        'answer4',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Answer'
+            )
+            ->addColumn(
+                        'question1',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Question1'
+            )
+            ->addColumn(
+                        'question2',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Question2'
+            )
+            ->addColumn(
+                        'question3',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Question3'
+            )
+            ->addColumn(
+                        'question4',
+                        Table::TYPE_TEXT,
+                        null,
+                        ['nullable => false'],
+                        'Question4'
+            )
+            ->addColumn(
+                        'created_at',
+                        Table::TYPE_TIMESTAMP,
+                        null,
+                        ['nullable => false', 'default' => Table::TIMESTAMP_INIT],
+                        'Created At'                    
+            );
                    $connection->createTable($surveyTable);
             
                    $setup->endSetup();
