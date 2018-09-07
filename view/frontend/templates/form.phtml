@@ -1,3 +1,65 @@
 <form class="form" action="result" method="post">
     <div>My Form</div>
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Customer Form') ?></span></legend><br>
+        <div class="field required">
+            <label for="number" class="label">
+                <span><?php /* @escapeNotVerified */ echo __('Name') ?></span>
+            </label>
+            <div class="control">
+                <input type="text" id="number"
+                       name="number"
+                       class="input-text">
+            </div>
+
+            <label for="number" class="label">
+                <span><?php /* @escapeNotVerified */ echo __('Lastname') ?></span>
+            </label>
+            <div class="control">
+                <input type="text" id="number"
+                       name="number"
+                       class="input-text">
+            </div>
+
+            <label for="number" class="label">
+                <span><?php /* @escapeNotVerified */ echo __('Age') ?></span>
+            </label>
+            <div class="control">
+                <input type="text" id="number"
+                       name="number"
+                       class="input-text">
+            </div>
+
+            <label for="number" class="label">
+                <span><?php /* @escapeNotVerified */ echo __('Do you like our products?') ?></span>
+            </label>
+            <div class="control">
+                <select name="Select">
+                    <option value="">Select...</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <label for="number" class="label">
+                <span><?php /* @escapeNotVerified */ echo __('Which product is your favorite?') ?></span>
+            </label>
+            <div class="control">
+                <select name="Select">
+                    <option value="">Select...</option>
+                    <option value="testproduct1">testproduct1</option>
+                    <option value="testproduct2">testproduct2</option>
+                </select>
+            </div>
+
+        </div>
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary" title="<?php /* @escapeNotVerified */ echo __('Submit') ?>">
+                <span><?php /* @escapeNotVerified */ echo __('Submit') ?></span>
+            </button>
+        </div>
+    </div>
 </form>

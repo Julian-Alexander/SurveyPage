@@ -28,7 +28,7 @@ if ($connection->isTableExists(self::ANSWER_TABLE)) {
          $surveyTable = $connection->newTable(
             self::ANSWER_TABLE
             )->addColumn(
-                         ‘answer_id’,
+                         'answer_id',
                          Table::TYPE_INTEGER,
                          null,
                          ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
